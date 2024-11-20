@@ -1,0 +1,823 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+/* ................NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  height: 15vh;
+}
+
+.logoFlora {
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Links da Navbar */
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  font-size: 16px;
+  color: #1f1f1f;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav_links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #1f1f1f;
+  transition: width 0.3s ease;
+}
+
+.nav_links li a:hover {
+  font-weight: bold;
+  color: #000;
+}
+
+.nav_links li a:hover::after {
+  width: 100%;
+}
+
+/* Ícones da Navbar */
+.nav_icons a {
+  text-align: center;
+  padding: 12px;
+}
+
+.nav_icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav_icons a:hover {
+  stroke: #1f1f1f;
+  stroke-width: 10; /* FAZER STROKE!!!! NAAAAAAAAO CONSIGO AQUIIII*/
+}
+
+#nav_burger {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .nav_links {
+    display: none;
+  }
+
+  .nav_icons {
+    display: none;
+  }
+
+  #nav_burger {
+    display: flex;
+  }
+}
+
+/* ................HERO IMAGE */
+#hero div {
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+
+#heroimage {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+}
+
+#heroimage-mobile {
+  width: 100vw;
+  height: 600px;
+  display: none;
+}
+
+.hero-h2 {
+  position: absolute;
+  text-align: center;
+  font-weight: 300;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #f7f7f7;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 1080px) {
+  #heroimage {
+    display: none;
+  }
+
+  #heroimage-mobile {
+    display: block;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .hero-h2 {
+    font-size: 20px;
+  }
+}
+
+/* ................BENEFICIOS COM BOOTSTRAP */
+.beneficio {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  text-align: center;
+}
+
+/* Benefício 1 - Alinhado à esquerda */
+.beneficio-left {
+  justify-content: flex-start;
+}
+
+/* Benefício 2 - Centralizado */
+.beneficio-center {
+  justify-content: center;
+}
+
+/* Benefício 3 - Alinhado à direita */
+.beneficio-right {
+  justify-content: flex-end;
+}
+
+/* Ícone dos Benefícios */
+.iconeBeneficio {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+/* Nome do Produto */
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Informações do Produto */
+.product-info {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Ajuste para Texto Alinhado Verticalmente */
+.beneficio div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .container.py-5 {
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza o grupo no centro da página */
+    gap: 48px; /* Espaçamento entre os itens */
+    padding: 0 10%; /* Margens laterais iguais */
+  }
+
+  .row.align-items-center.justify-content-between {
+    display: flex; /* Flexbox para organizar os benefícios */
+    flex-direction: column; /* Benefícios em coluna */
+    gap: 32px; /* Espaçamento entre benefícios */
+    width: 100%; /* Ocupa 100% da largura disponível */
+  }
+
+  .col-auto.d-flex {
+    display: flex; /* Flexbox para cada benefício */
+    justify-content: flex-start; /* Alinha cada benefício à esquerda */
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    text-align: left; /* Texto alinhado à esquerda */
+    width: 100%; /* Garante que cada benefício ocupa a largura total */
+  }
+}
+
+/* ................DESTAQUES POPULAR + NOVIDADE (DOIS CARDS) */
+
+.highlights-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.highlight-box {
+  position: relative;
+  width: calc(50% - 20px);
+  height: 464px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Filtro de opacidade */
+.highlight-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+}
+
+.highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto sobreposto */
+.highlight-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.highlight-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.highlight-description {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ................8 CARDS DOS MAIS VENDIDOS) */
+
+.maisvendidos h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+/*CARDS DOS PRODUTOS COM IMAGEM E PREÇO*/
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 10%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Estilo para cada card */
+.card {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+  border: none;
+}
+
+/* Imagem do card */
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ícone de coração */
+.heart-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.heart-icon:hover {
+  background-color: #1f1f1f;
+}
+
+.heart-icon img {
+  width: 100%;
+}
+
+.heart-icon img:hover {
+  filter: invert(100%);
+}
+
+/* Texto dentro do card */
+
+.price h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 8px 0;
+}
+
+.price p {
+  font-size: 16px;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+/* Mobile (telas menores) */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .products {
+    padding: 0 20px;
+    gap: 16px;
+  }
+}
+
+/*botao ver mais*/
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 20px 0;
+  width: 100%;
+}
+
+.ver-mais {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ver-mais:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .ver-mais-container {
+    margin: 50px auto 0;
+  }
+}
+
+/*.................SECÇÃO DESTAQUE SEMANAL */
+.weekly-section {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  margin: 200px 0;
+  width: 100%;
+}
+
+.weekly-section {
+  margin-bottom: 150px;
+}
+
+/* Imagem da seção semanal */
+.weekly-image {
+  flex: 1;
+  width: 50%;
+  height: auto;
+}
+
+.weekly-image img {
+  width: 100%;
+  height: auto;
+  height: 464px;
+  object-fit: cover;
+}
+
+/* Estilo do texto à direita da imagem */
+.weekly-text {
+  flex: 1;
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+/* Título principal */
+.weekly-text h4 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Subtítulo */
+.weekly-text h6 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #1f1f1f;
+}
+
+/* Preço */
+.weekly-text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+/* Estilo do botão "Adicionar ao carrinho" */
+.button-weekly {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.adicionar-carrinho {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adicionar-carrinho:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Descrição do produto */
+.weekly-text p:last-of-type {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .weekly-section {
+    flex-direction: column;
+    gap: 10px; /* Reduz o gap no mobile */
+  }
+
+  /* Imagem ocupa 100% da largura no mobile */
+  .weekly-image {
+    width: 100%;
+  }
+
+  /* Bloco de texto ocupa toda a largura também */
+  .weekly-text {
+    width: 100%;
+  }
+}
+
+/*.................SOBRE NÓS */
+
+.sobrenos h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.sobrenos-img img {
+  width: 100%;
+  height: 100vw;
+  height: 464px;
+  object-fit: cover;
+  object-position: 80% 20%;
+  overflow: hidden;
+}
+
+.sobrenos-texto {
+  display: flex;
+  gap: 20px;
+  padding: 20px 10%;
+  margin: 0 auto;
+}
+
+.sobrenos-citacao {
+  font-size: 24px;
+  font-weight: 500;
+  color: #29514b;
+  margin-top: 20px;
+  margin-right: 80px;
+  width: 50%;
+  text-align: left;
+  padding: 100px 40px 0 20px;
+}
+
+.sobrenos-paragrafo {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  margin-top: 20px;
+  width: 50%;
+  text-align: left;
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .sobrenos-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .sobrenos-citacao {
+    width: 100%;
+    text-align: left;
+  }
+
+  .sobrenos-paragrafo {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*.................FEEDBACK */
+
+#feedback {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: 50%;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding: 20px 10%;
+  gap: 20px;
+  padding: 20px 10%;
+}
+
+#feedback img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Título do feedback */
+.feedback-titulo {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  flex: 1;
+  margin-top: 20px;
+  width: 50%;
+  padding: 100px 40px 0 20px;
+  z-index: 1;
+}
+
+/* Formulário do feedback */
+#feedback-formulario {
+  flex: 1;
+  width: 50%;
+  margin-top: 20px;
+  padding: 100px 40px 0 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+/* Inputs e textarea */
+#feedback-formulario input,
+#feedback-formulario textarea {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#feedback-formulario input::placeholder,
+#feedback-formulario textarea::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+#feedback-formulario textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Botão de submeter */
+.botao-submeter .submeter {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-submeter .submeter:hover {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #feedback {
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feedback-titulo {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  #feedback-formulario {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+  }
+}
+
+/*.................FOOTER */
+#footer {
+  background-color: #90a74d;
+  margin: 0;
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaçamento entre as seções */
+}
+
+.contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 100px 0 50px 0;
+}
+
+.contactos h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+}
+
+.contactos p {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+
+/* Footer ícones e links */
+#footer-container {
+  display: flex;
+  flex-direction: column; /* Configuração inicial para mobile */
+  gap: 20px;
+}
+
+.footer-icones {
+  display: flex;
+  justify-content: flex-start; /* Alinha ícones à esquerda */
+  gap: 20px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-wrap: wrap; /* Para organizar os links no mobile */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Espaçamento entre links */
+}
+
+.footer-links li {
+  float: none;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Linha e Direitos Reservados */
+.hrfooter {
+  border: none;
+  border-top: 1px solid white;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.allrights {
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 4%;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  #footer-container {
+    flex-direction: row; /* Ícones e links lado a lado no desktop */
+    justify-content: space-between; /* Distribuição horizontal */
+    align-items: center;
+  }
+
+  .footer-links ul {
+    justify-content: flex-end; /* Links alinhados à direita */
+  }
+}
+
+@media (max-width: 767px) {
+  #footer-container {
+    flex-direction: column; /* Ícones em cima e links embaixo no mobile */
+    gap: 20px;
+  }
+
+  .footer-icones {
+    justify-content: flex-start; /* Alinha ícones à esquerda no mobile */
+  }
+
+  .footer-links ul {
+    flex-direction: column; /* Links em coluna */
+    gap: 10px;
+  }
+}

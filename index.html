@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flora</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--Fonte Tipográfica-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+    
+  <!--Favicon-->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Icons/Favicon/favicon.png"
+    />
+    
+</head>
+
+<body class="bg-light">
+
+  <header>
+    <!-- Navbar -->
+    <img class="logoFlora" src="Logos/logo.png" alt="logoFlora" />
+    <nav>
+      <ul class="nav_links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Loja</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contactos</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav_icons">
+      <a href="#lupa"><img class="lupa_icon" src="Icons/navbar/lupa.svg" alt="Lupa" /></a>
+      <a href="#perfil"><img class="perfil_icon" src="Icons/navbar/perfil.svg" alt="Perfil" /></a>
+      <a href="#preferidos"><img class="preferidos_icon" src="Icons/navbar/preferidos.svg" alt="Preferidos" /></a>
+      <a href="#carrinho"><img class="carrinho_icon" src="Icons/navbar/carrinho.svg" alt="Carrinho" /></a>
+    </div>
+
+    <div id="nav_burger">
+      <img class="nav_burger_icon" src="Icons/navbar/burger.svg">
+    </div>
+
+  </header>
+
+  <!-- Hero Image -->
+
+  <div id="hero">
+    <h2 class="hero-h2">
+      Conecte-se com <br />
+      a natureza
+    </h2>
+    <img src="Image/heroimage.svg" alt="hero" id="heroimage" />
+    <img src="Image/heroimage-mobile.svg" alt="hero" id="heroimage-mobile" />
+  </div>
+
+  <!-- 3 Benefícios -->
+
+  <div class="container py-5">
+    <div class="row align-items-center justify-content-between">
+      <!-- Benefício 1 -->
+
+      <div class="col-auto d-flex align-items-left">
+        <img src="Icons/beneficios/beneficio1.svg" class="img-fluid iconeBeneficio" alt="Benefício 1" />
+        <div>
+          <p class="product-name">Envios Grátis</p>
+          <p class="product-info">Envios Grátis acima de 50€</p>
+        </div>
+      </div>
+
+      <!-- Benefício 2 -->
+
+      <div class="col-auto d-flex align-items-center">
+        <img src="Icons/beneficios/beneficio2.svg" class="img-fluid iconeBeneficio" alt="Benefício 2" />
+        <div>
+          <p class="product-name">Devolução Garantida</p>
+          <p class="product-info">No prazo de 30 dias numa troca</p>
+        </div>
+      </div>
+
+      <!-- Benefício 3 -->
+
+      <div class="col-auto d-flex align-items-right">
+        <img src="Icons/beneficios/beneficio3.svg" class="img-fluid iconeBeneficio" alt="Benefício 3" />
+        <div>
+          <p class="product-name">Pagamento Flexível</p>
+          <p class="product-info">Vários métodos de pagamento</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Destaques mais popular e novidades -->
+
+  <div class="highlights-container">
+    <div class="highlight-box">
+      <div class="highlight-image">
+        <img src="Image/Destaques/destaque1.png" alt="Image 1" />
+      </div>
+      <div class="highlight-text">
+        <h3 class="highlight-title">Mais popular</h3>
+        <p class="highlight-description">Ver mais</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-image">
+        <img src="Image/Destaques/destaque2.png" alt="Image 2" />
+      </div>
+      <div class="highlight-text">
+        <h3 class="highlight-title">Novidades</h3>
+        <p class="highlight-description">Ver mais</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="maisvendidos">
+    <h3>Mais vendidos</h3>
+  </div>
+
+  <div class="products">
+
+    <!-- CARDS Card 1 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card1.jpg" alt="card1" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Deliciosa Mint Monstera</h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card2.jpg" alt="card2" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Caixa Misteriosa </h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card3.jpg" alt="card3" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Burle Marx Flame </h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card4.jpg" alt="card4" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Caixa Sustentável </h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card5.jpg" alt="card5" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Deliciosa Variegated </h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card6.jpg" alt="card6" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Baby Thai Constellation</h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card7.jpg" alt="card7" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Warocqueanum</h6>
+        <p>50€</p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="Image/cards/card8.jpg" alt="card8" />
+        <div class="heart-icon">
+          <img src="Image/cards/preferidos.svg">
+        </div>
+      </div>
+      <div class="price">
+        <h6>Thai Constellation</h6>
+        <p>50€</p>
+      </div>
+    </div>
+    </section>
+  </div>
+
+  <div class="button-container">
+    <button class="button ver-mais">Ver Mais</button>
+  </div>
+
+  <!--DESTAQUE SEMANAL-->
+
+  <div class="weekly-section">
+    <div class="weekly-image">
+      <img src="Image/destaqueSemanal/destaquesemanal.png">
+    </div>
+    <div class="weekly-text">
+      <h4>Destaque da semana</h4>
+      <h6>Thai Constellation</h6>
+      <p>50€</p>
+      <div class="button-weekly">
+        <button class="button adicionar-carrinho">Comprar já</button>
+      </div>
+      <p>A Brighamia insignis, também conhecida como Palmeira Havaiana, é uma planta única e exótica que traz um toque
+        tropical para a sua casa. Com o seu caule espesso, semelhante ao de uma suculenta, e as suas folhas verde-vivo e
+        luxuriantes agrupadas no topo, esta planta possui uma aparência distintiva, semelhante a uma palmeira, que a
+        torna um ponto focal impressionante. Perfeita para adicionar uma vibração tropical à sua decoração, a Brighamia
+        insignis certamente irá impressionar.</p>
+    </div>
+  </div>
+
+  <!--SOBRE NÓS-->
+  <section>
+
+    <div class="sobrenos">
+      <h3>Sobre nós</h3>
+    </div>
+
+    <div class="sobrenos-img">
+      <img src="Image/sobreNos/sobreNos.png" alt="imagem sobre nós">
+    </div>
+
+    <div class="sobrenos-texto">
+      <div class="sobrenos-citacao" alt="citação da família">
+        <p>"Do nosso viveiro familiar para a sua casa, cultivamos plantas há mais de 150 anos!"</p>
+      </div>
+
+      <div class="sobrenos-paragrafo" alt="texto sobre nós">
+        <p>O amor da nossa família pelas plantas remonta a mais de 150 anos, começando com o nosso bisavô. Cultivar
+          plantas bonitas e únicas está no nosso sangue, mas também somos empreendedores por natureza. A nossa paixão
+          leva-nos a inovar continuamente, saindo da nossa zona de conforto para o surpreender e inspirar com plantas
+          novas e invulgares. </p>
+        <br>
+        <p><i>João Oliveira | CEO</i></p>
+      </div>
+    </div>
+
+  </section>
+
+  <!--FEEDBACK-->
+
+  <section>
+    <div id="feedback">
+      <img src="Image/feedback/feedback.svg" alt="imagem de fundo">
+
+      <div class="feedback-titulo">
+        <p>Partilha connosco as suas questões e responderemos assim que possível.</p>
+      </div>
+
+      <form id="feedback-formulario">
+        <input type="text" name="nome" id="feedback-formulario-nome" placeholder="Nome próprio">
+        <input type="email" name="email" id="feedback-formulario-email" placeholder="Email">
+        <textarea name="mensagem" id="feedback-formulario-mensagem" placeholder="Mensagem"></textarea>
+        <div class="botao-submeter">
+          <button class="botao submeter">Submeter</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--FOOTER-->
+  <section id="footer">
+    <div class="contactos">
+      <h2>Contactos</h2>
+      <p>+351 910 111 111</p>
+      <p>floraonline@flora.pt</p>
+    </div>
+
+    <!-- Ícones e Links -->
+    <div id="footer-container">
+      <div class="footer-icones">
+        <img src="Icons/footer/linkedin.svg" alt="Ícone LinkedIn">
+        <img src="Icons/footer/instagram.svg" alt="Ícone Instagram">
+        <img src="Icons/footer/envelope.svg" alt="Ícone Email">
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="#loja">Loja</a></li>
+          <li><a href="#Blog">Blog</a></li>
+          <li><a href="#perguntas-frequentes">Perguntas Frequentes</a></li>
+          <li><a href="#termoscondições">Termos & Condições</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="hrfooter">
+
+    <p class="allrights">© 2025 All rights reserved. Designed by Sofia Santos</p>
+  </section>
+
+
+
+</body>
+
+</html>
