@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+/* ................NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  height: 15vh;
+}
+
+.logoFlora {
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Links da Navbar */
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  font-size: 16px;
+  color: #1f1f1f;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav_links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #1f1f1f;
+  transition: width 0.3s ease;
+}
+
+.nav_links li a:hover {
+  font-weight: bold;
+  color: #000;
+}
+
+.nav_links li a:hover::after {
+  width: 100%;
+}
+
+/* Ícones da Navbar */
+.nav_icons a {
+  text-align: center;
+  padding: 12px;
+}
+
+.nav_icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav_icons a:hover {
+  stroke: #1f1f1f;
+  stroke-width: 10;
+}
+
+#nav_burger {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .nav_links {
+    display: none;
+  }
+
+  .nav_icons {
+    display: none;
+  }
+
+  #nav_burger {
+    display: flex;
+  }
+}
+
+/* ................HERO IMAGE */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+
+#heroimage {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+.hero-h2 {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 300;
+  color: #f7f7f7;
+  letter-spacing: 5px;
+  text-align: center;
+  top: 50%; /* Alinha verticalmente ao centro */
+  left: 50%; /* Alinha horizontalmente ao centro */
+  transform: translate(-50%, -50%); /* Ajuste para centralizar */
+}
+
+/*.................FEEDBACK */
+
+#feedback {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: 50%;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding: 20px 10%;
+  gap: 20px;
+  padding: 20px 10%;
+}
+
+#feedback img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Título do feedback */
+.feedback-titulo {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  flex: 1;
+  margin-top: 20px;
+  width: 50%;
+  padding: 100px 40px 0 20px;
+  z-index: 1;
+}
+
+/* Formulário do feedback */
+#feedback-formulario {
+  flex: 1;
+  width: 50%;
+  margin-top: 20px;
+  padding: 100px 40px 0 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+/* Inputs e textarea */
+#feedback-formulario input,
+#feedback-formulario textarea {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#feedback-formulario input::placeholder,
+#feedback-formulario textarea::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+#feedback-formulario textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Botão de submeter */
+.botao-submeter .submeter {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-submeter .submeter:hover {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #feedback {
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feedback-titulo {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  #feedback-formulario {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+  }
+}
+
+/*.................FOOTER */
+#footer {
+  background-color: #90a74d;
+  margin: 0;
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaçamento entre as seções */
+}
+
+.contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 100px 0 50px 0;
+}
+
+.contactos h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+}
+
+.contactos p {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+
+/* Footer ícones e links */
+#footer-container {
+  display: flex;
+  flex-direction: column; /* Configuração inicial para mobile */
+  gap: 20px;
+}
+
+.footer-icones {
+  display: flex;
+  justify-content: flex-start; /* Alinha ícones à esquerda */
+  gap: 20px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-wrap: wrap; /* Para organizar os links no mobile */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Espaçamento entre links */
+}
+
+.footer-links li {
+  float: none;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Linha e Direitos Reservados */
+.hrfooter {
+  border: none;
+  border-top: 1px solid white;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.allrights {
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 4%;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  #footer-container {
+    flex-direction: row; /* Ícones e links lado a lado no desktop */
+    justify-content: space-between; /* Distribuição horizontal */
+    align-items: center;
+  }
+
+  .footer-links ul {
+    justify-content: flex-end; /* Links alinhados à direita */
+  }
+}
+
+@media (max-width: 767px) {
+  #footer-container {
+    flex-direction: column; /* Ícones em cima e links embaixo no mobile */
+    gap: 20px;
+  }
+
+  .footer-icones {
+    justify-content: flex-start; /* Alinha ícones à esquerda no mobile */
+  }
+
+  .footer-links ul {
+    flex-direction: column; /* Links em coluna */
+    gap: 10px;
+  }
+}
