@@ -490,6 +490,15 @@ header {
   transition: all 0.3s ease;
 }
 
+.adicionar-carrinho a {
+  text-decoration: none;
+  color: inherit; /* Para herdar a cor do botão */
+}
+
+.adicionar-carrinho a:hover {
+  text-decoration: none;
+}
+
 .adicionar-carrinho:hover {
   background-color: #1f1f1f;
   color: white;
