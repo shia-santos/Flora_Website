@@ -27,7 +27,6 @@
       sizes="16x16"
       href="Icons/Favicon/favicon.png"
     />
-    
   </head>
 
   <body class="bg-light">
@@ -79,13 +78,74 @@
     <!-- Formulario -->
     <div class="container">
       <div class="row">
-        <!-- Coluna principal -->
+        <!-- Carrinho ao lado direito (em mobile será movido para a primeira posição) -->
+        <div class="col-md-5 col-lg-4 order-md-first">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-dark">Carrinho</span>
+            <!-- Alterado de text-primary para text-dark -->
+            <span class="badge bg-dark rounded-pill">1</span>
+            <!-- Alterado de bg-primary para bg-dark -->
+            <!-- Um produto -->
+          </h4>
+
+          <!-- Imagem abaixo do título do carrinho -->
+          <div class="mb-3">
+            <img
+              src="Image/destaqueSemanal/destaquesemanal.png"
+              alt="Imagem do carrinho"
+              class="img-fluid"
+            />
+          </div>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Thai Constellation</h6>
+                <!-- Nome do produto -->
+                <small class="text-muted">Descrição breve</small>
+              </div>
+              <span class="text-muted">€12</span>
+              <!-- Preço -->
+            </li>
+            <!-- Código promocional e total -->
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Código promocional</h6>
+                <small>EXEMPLOCODE</small>
+              </div>
+              <span class="text-success">−€5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total</span>
+              <strong>€7</strong>
+              <!-- Total após o código promocional -->
+            </li>
+          </ul>
+
+          <form class="card p-2">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Código promocional"
+              />
+              <button type="submit" class="btn btn-dark">Aplicar</button>
+              <!-- Alterado de btn-secondary para btn-dark -->
+            </div>
+          </form>
+        </div>
+
+        <!-- Coluna principal com formulário de pagamento -->
         <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Informações de Contacto</h4>
+          <h4 class="mb-3 text-dark">Informações de Contacto</h4>
+          <!-- Alterado de mb-3 para text-dark -->
           <form novalidate>
             <div class="row g-3">
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Primeiro nome</label>
+                <label for="firstName" class="form-label text-dark"
+                  >Primeiro nome</label
+                >
+                <!-- Alterado para text-dark -->
                 <input
                   id="firstName"
                   type="text"
@@ -97,7 +157,10 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="lastName" class="form-label">Último nome</label>
+                <label for="lastName" class="form-label text-dark"
+                  >Último nome</label
+                >
+                <!-- Alterado para text-dark -->
                 <input
                   id="lastName"
                   type="text"
@@ -109,7 +172,10 @@
               </div>
 
               <div class="col-12">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label text-dark"
+                  >Username</label
+                >
+                <!-- Alterado para text-dark -->
                 <div class="input-group">
                   <span class="input-group-text">@</span>
                   <input
@@ -124,7 +190,8 @@
               </div>
 
               <div class="col-md-5">
-                <label for="country" class="form-label">País</label>
+                <label for="country" class="form-label text-dark">País</label>
+                <!-- Alterado para text-dark -->
                 <select id="country" class="form-control" required>
                   <option value="">Escolha...</option>
                   <option>Portugal</option>
@@ -134,7 +201,8 @@
               </div>
 
               <div class="col-md-4">
-                <label for="state" class="form-label">Região</label>
+                <label for="state" class="form-label text-dark">Região</label>
+                <!-- Alterado para text-dark -->
                 <select id="state" class="form-control" required>
                   <option value="">Escolha...</option>
                   <option>Aveiro</option>
@@ -146,7 +214,10 @@
               </div>
 
               <div class="col-md-3">
-                <label for="postcode" class="form-label">Código-Postal</label>
+                <label for="postcode" class="form-label text-dark"
+                  >Código-Postal</label
+                >
+                <!-- Alterado para text-dark -->
                 <input
                   id="postcode"
                   type="text"
@@ -166,21 +237,24 @@
                 type="checkbox"
                 class="form-check-input"
               />
-              <label class="form-check-label" for="sameAddress">
+              <label class="form-check-label text-dark" for="sameAddress">
+                <!-- Alterado para text-dark -->
                 O endereço de entrega é o mesmo que o de faturação.
               </label>
             </div>
 
             <div class="form-check">
               <input id="saveInfo" type="checkbox" class="form-check-input" />
-              <label class="form-check-label" for="saveInfo">
+              <label class="form-check-label text-dark" for="saveInfo">
+                <!-- Alterado para text-dark -->
                 Guardar esta informação.
               </label>
             </div>
 
             <hr class="my-4" />
 
-            <h4 class="mb-3">Pagamento</h4>
+            <h4 class="mb-3 text-dark">Pagamento</h4>
+            <!-- Alterado para text-dark -->
 
             <div class="form-check">
               <input
@@ -191,7 +265,10 @@
                 checked
                 required
               />
-              <label for="creditCard">Cartão de crédito</label>
+              <label class="text-dark" for="creditCard">
+                <!-- Alterado para text-dark -->
+                Cartão de crédito
+              </label>
             </div>
 
             <div class="form-check">
@@ -202,7 +279,10 @@
                 class="form-check-input"
                 required
               />
-              <label for="directDebit">Débito direto</label>
+              <label class="text-dark" for="directDebit">
+                <!-- Alterado para text-dark -->
+                Débito direto
+              </label>
             </div>
 
             <div class="form-check">
@@ -213,12 +293,18 @@
                 class="form-check-input"
                 required
               />
-              <label for="PayPal">PayPal</label>
+              <label class="text-dark" for="PayPal">
+                <!-- Alterado para text-dark -->
+                PayPal
+              </label>
             </div>
 
             <div class="row my-3 gy-3">
               <div class="col-md-6">
-                <label for="fullName" class="form-label">Nome no cartão</label>
+                <label for="fullName" class="form-label text-dark"
+                  >Nome no cartão</label
+                >
+                <!-- Alterado para text-dark -->
                 <input
                   id="fullName"
                   type="text"
@@ -234,9 +320,10 @@
               </div>
 
               <div class="col-md-6">
-                <label for="cc-number" class="form-label"
+                <label for="cc-number" class="form-label text-dark"
                   >Número do Cartão</label
                 >
+                <!-- Alterado para text-dark -->
                 <input
                   id="cc-number"
                   type="text"
@@ -249,9 +336,10 @@
               </div>
 
               <div class="col-md-6">
-                <label for="cc-expired" class="form-label"
+                <label for="cc-expired" class="form-label text-dark"
                   >Data de Expiração</label
                 >
+                <!-- Alterado para text-dark -->
                 <input
                   id="cc-expired"
                   type="text"
@@ -264,7 +352,8 @@
               </div>
 
               <div class="col-md-6">
-                <label for="cc-cvv" class="form-label">CVV</label>
+                <label for="cc-cvv" class="form-label text-dark">CVV</label>
+                <!-- Alterado para text-dark -->
                 <input id="cc-cvv" type="text" class="form-control" required />
                 <div class="invalid-feedback">CVV é obrigatório.</div>
               </div>
@@ -272,72 +361,10 @@
 
             <hr class="my-4" />
 
-            <button class="btn btn-primary btn-lg btn-block">
+            <button class="btn btn-dark btn-lg btn-block adicionar-carrinho">
+              <!-- Alterado para btn-dark -->
               Continuar para o checkout
             </button>
-          </form>
-        </div>
-
-        <!-- Carrinho ao lado direito -->
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Carrinho</span>
-            <span class="badge bg-primary rounded-pill">3</span>
-          </h4>
-
-          <!-- Imagem abaixo do título do carrinho -->
-          <div class="mb-3">
-            <img
-              src="Image/destaqueSemanal/destaquesemanal.png"
-              alt="Imagem do carrinho"
-              class="img-fluid"
-            />
-          </div>
-
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Produto 1</h6>
-                <small class="text-muted">Descrição breve</small>
-              </div>
-              <span class="text-muted">€12</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Produto 2</h6>
-                <small class="text-muted">Descrição breve</small>
-              </div>
-              <span class="text-muted">€8</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Produto 3</h6>
-                <small class="text-muted">Descrição breve</small>
-              </div>
-              <span class="text-muted">€5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-              <div class="text-success">
-                <h6 class="my-0">Código promocional</h6>
-                <small>EXEMPLOCODE</small>
-              </div>
-              <span class="text-success">−€5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total</span>
-              <strong>€20</strong>
-            </li>
-          </ul>
-
-          <form class="card p-2">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Código promocional"
-              />
-              <button type="submit" class="btn btn-secondary">Aplicar</button>
-            </div>
           </form>
         </div>
       </div>

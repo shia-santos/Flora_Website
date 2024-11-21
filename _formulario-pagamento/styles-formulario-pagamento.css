@@ -110,12 +110,97 @@ header {
   position: absolute;
   font-size: 32px;
   font-weight: 300;
+  line-height: 38px;
   color: #f7f7f7;
-  letter-spacing: 5px;
   text-align: center;
-  top: 50%; /* Alinha verticalmente ao centro */
-  left: 50%; /* Alinha horizontalmente ao centro */
-  transform: translate(-50%, -50%); /* Ajuste para centralizar */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*...................FORMULARIO*/
+/*...................FORMULARIO*/
+
+/* Estilos para o botão "Adicionar ao Carrinho" */
+.adicionar-carrinho {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adicionar-carrinho:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Botão "Continuar para o checkout" com as mesmas características do "Adicionar ao Carrinho" */
+.adicionar-carrinho.checkout-btn {
+  background-color: white;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adicionar-carrinho.checkout-btn:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Carrinho aparece primeiro em mobile */
+  .col-md-5.col-lg-4 {
+    order: 1;
+    margin-top: 30px;
+    margin-bottom: 120px;
+  }
+
+  .col-md-7.col-lg-8 {
+    order: 2;
+    margin-bottom: 30px;
+  }
+
+  /* Botão "Continuar para o checkout"*/
+  .adicionar-carrinho.checkout-btn {
+    margin-bottom: 120px;
+  }
+}
+
+/* Desktop: Carrinho à direita */
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-md-5.col-lg-4 {
+    order: 1;
+    margin-bottom: 40px;
+  }
+
+  .col-md-7.col-lg-8 {
+    order: 0;
+    margin-top: 40px;
+  }
+
+  /* Botão "Continuar para o checkout" desktop*/
+  .adicionar-carrinho.checkout-btn {
+    margin-bottom: 200px;
+  }
 }
 
 /*.................FEEDBACK */
@@ -271,23 +356,23 @@ header {
 /* Footer ícones e links */
 #footer-container {
   display: flex;
-  flex-direction: column; /* Configuração inicial para mobile */
+  flex-direction: column;
   gap: 20px;
 }
 
 .footer-icones {
   display: flex;
-  justify-content: flex-start; /* Alinha ícones à esquerda */
+  justify-content: flex-start;
   gap: 20px;
 }
 
 .footer-links ul {
   display: flex;
-  flex-wrap: wrap; /* Para organizar os links no mobile */
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* Espaçamento entre links */
+  gap: 20px;
 }
 
 .footer-links li {
@@ -325,28 +410,28 @@ header {
 /* Responsividade */
 @media (min-width: 768px) {
   #footer-container {
-    flex-direction: row; /* Ícones e links lado a lado no desktop */
-    justify-content: space-between; /* Distribuição horizontal */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
   .footer-links ul {
-    justify-content: flex-end; /* Links alinhados à direita */
+    justify-content: flex-end;
   }
 }
 
 @media (max-width: 767px) {
   #footer-container {
-    flex-direction: column; /* Ícones em cima e links embaixo no mobile */
+    flex-direction: column;
     gap: 20px;
   }
 
   .footer-icones {
-    justify-content: flex-start; /* Alinha ícones à esquerda no mobile */
+    justify-content: flex-start;
   }
 
   .footer-links ul {
-    flex-direction: column; /* Links em coluna */
+    flex-direction: column;
     gap: 10px;
   }
 }

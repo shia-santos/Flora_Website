@@ -70,7 +70,7 @@ header {
 
 .nav_icons a:hover {
   stroke: #1f1f1f;
-  stroke-width: 10; /* FAZER STROKE!!!! NAAAAAAAAO CONSIGO AQUIIII*/
+  stroke-width: 10;
 }
 
 #nav_burger {
@@ -200,26 +200,26 @@ header {
 
 @media (max-width: 1200px) {
   .container.py-5 {
-    display: flex; /* Flexbox para centralizar o conteúdo */
-    flex-direction: column; /* Organiza os itens verticalmente */
-    align-items: center; /* Centraliza o grupo no centro da página */
-    gap: 48px; /* Espaçamento entre os itens */
-    padding: 0 10%; /* Margens laterais iguais */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 0 10%;
   }
 
   .row.align-items-center.justify-content-between {
-    display: flex; /* Flexbox para organizar os benefícios */
-    flex-direction: column; /* Benefícios em coluna */
-    gap: 32px; /* Espaçamento entre benefícios */
-    width: 100%; /* Ocupa 100% da largura disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
   }
 
   .col-auto.d-flex {
-    display: flex; /* Flexbox para cada benefício */
-    justify-content: flex-start; /* Alinha cada benefício à esquerda */
-    align-items: center; /* Alinha ícone e texto verticalmente */
-    text-align: left; /* Texto alinhado à esquerda */
-    width: 100%; /* Garante que cada benefício ocupa a largura total */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    width: 100%;
   }
 }
 
@@ -235,8 +235,8 @@ header {
 
 .highlight-box {
   position: relative;
-  width: calc(50% - 20px);
-  height: 464px;
+  width: calc(50% - 20px); /* Tamanho original dos cards com o gap de 40px */
+  height: 464px; /* Altura padrão */
   background-color: #fff;
   overflow: hidden;
   display: flex;
@@ -280,6 +280,31 @@ header {
 .highlight-description {
   font-size: 16px;
   margin: 0;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .highlights-container {
+    flex-direction: row; /* Alinha os cards horizontalmente no mobile */
+    gap: 20px; /* Gap de 20px entre os cards */
+  }
+
+  .highlight-box {
+    width: calc(
+      50% - 10px
+    ); /* Ajuste no width para que os cards ocupem a tela inteira com 20px de gap */
+    height: 300px; /* Altura ajustada para 400px */
+  }
+
+  /* Card da esquerda - sem margem à esquerda */
+  .highlight-box:first-of-type {
+    margin-left: 0;
+  }
+
+  /* Card da direita - sem margem à direita */
+  .highlight-box:last-of-type {
+    margin-right: 0;
+  }
 }
 
 /* ................8 CARDS DOS MAIS VENDIDOS) */
@@ -366,7 +391,7 @@ header {
   margin: 0;
 }
 
-/* Mobile (telas menores) */
+/* Mobile */
 @media (max-width: 768px) {
   .card {
     flex: 1 1 100%;
@@ -383,7 +408,7 @@ header {
 
 .button-container {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
   padding: 20px 0;
   width: 100%;
 }
@@ -488,11 +513,11 @@ header {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .adicionar-carrinho a {
-  text-decoration: none;
-  color: inherit; /* Para herdar a cor do botão */
+  color: inherit;
 }
 
 .adicionar-carrinho a:hover {
@@ -511,9 +536,10 @@ header {
   color: #1f1f1f;
   margin-top: 20px;
   max-width: 600px;
-  text-align: justify;
+  text-align: left;
 }
 
+/* Responsividade para mobile */
 /* Responsividade para mobile */
 @media (max-width: 768px) {
   .weekly-section {
@@ -526,9 +552,25 @@ header {
     width: 100%;
   }
 
-  /* Bloco de texto ocupa toda a largura também */
+  /* Bloco de texto alinhado com o feedback */
   .weekly-text {
     width: 100%;
+    padding: 20px 10%; /* Mesmo padding lateral do parágrafo de feedback */
+    gap: 20px; /* Mantém consistência no espaçamento entre itens */
+  }
+
+  /* Ajusta alinhamento e espaçamento dos títulos e parágrafos */
+  .weekly-text h4,
+  .weekly-text h6,
+  .weekly-text p {
+    margin: 0;
+    text-align: left; /* Alinhamento à esquerda */
+  }
+
+  /* Descrição do produto alinhada */
+  .weekly-text p:last-of-type {
+    max-width: 100%;
+    text-align: justify; /* Igual ao parágrafo do feedback */
   }
 }
 
@@ -584,17 +626,19 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 10px;
+    padding: 40px;
   }
 
-  .sobrenos-citacao {
-    width: 100%;
-    text-align: left;
-  }
-
+  .sobrenos-citacao,
   .sobrenos-paragrafo {
     width: 100%;
     text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sobrenos-citacao {
+    margin-bottom: 20px;
   }
 }
 
@@ -706,7 +750,7 @@ header {
 
   .feedback-titulo {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     padding: 20px;
   }
@@ -725,7 +769,7 @@ header {
   padding: 20px 10%;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Espaçamento entre as seções */
+  gap: 40px;
 }
 
 .contactos {
@@ -751,23 +795,23 @@ header {
 /* Footer ícones e links */
 #footer-container {
   display: flex;
-  flex-direction: column; /* Configuração inicial para mobile */
+  flex-direction: column;
   gap: 20px;
 }
 
 .footer-icones {
   display: flex;
-  justify-content: flex-start; /* Alinha ícones à esquerda */
+  justify-content: flex-start;
   gap: 20px;
 }
 
 .footer-links ul {
   display: flex;
-  flex-wrap: wrap; /* Para organizar os links no mobile */
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* Espaçamento entre links */
+  gap: 20px;
 }
 
 .footer-links li {
@@ -805,28 +849,28 @@ header {
 /* Responsividade */
 @media (min-width: 768px) {
   #footer-container {
-    flex-direction: row; /* Ícones e links lado a lado no desktop */
-    justify-content: space-between; /* Distribuição horizontal */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
   .footer-links ul {
-    justify-content: flex-end; /* Links alinhados à direita */
+    justify-content: flex-end;
   }
 }
 
 @media (max-width: 767px) {
   #footer-container {
-    flex-direction: column; /* Ícones em cima e links embaixo no mobile */
+    flex-direction: column;
     gap: 20px;
   }
 
   .footer-icones {
-    justify-content: flex-start; /* Alinha ícones à esquerda no mobile */
+    justify-content: flex-start;
   }
 
   .footer-links ul {
-    flex-direction: column; /* Links em coluna */
+    flex-direction: column;
     gap: 10px;
   }
 }
