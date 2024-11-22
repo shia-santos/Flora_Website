@@ -650,11 +650,10 @@ header {
   align-items: flex-start;
   justify-content: 50%;
   width: 100%;
-  height: 600px;
+  height: 600px; /* Altura padrão para desktops */
   overflow: hidden;
   padding: 20px 10%;
   gap: 20px;
-  padding: 20px 10%;
 }
 
 #feedback img {
@@ -746,6 +745,7 @@ header {
     align-items: left;
     gap: 20px;
     padding: 20px;
+    height: 700px; /* Altura ajustada para dispositivos móveis */
   }
 
   .feedback-titulo {
@@ -862,7 +862,7 @@ header {
 @media (max-width: 767px) {
   #footer-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 60px;
   }
 
   .footer-icones {
