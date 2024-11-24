@@ -37,3 +37,5 @@ O projecto foi inicialmente desenhado em Figma.
 Projecto elaborado por Sofia Santos no âmbito da disciplina de Programação WEB na CESAE, 2024
 
 - HTML, CSS e Bootstrap
+– tempo: 2 semanas
+
