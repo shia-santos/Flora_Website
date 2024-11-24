@@ -12,8 +12,16 @@ header {
   align-items: center;
   padding: 30px 10%;
   height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo */
 .logoFlora {
   cursor: pointer;
   width: 150px;
@@ -73,6 +81,7 @@ header {
   stroke-width: 10;
 }
 
+/* Menu para telas menores */
 #nav_burger {
   display: none;
 }
@@ -89,6 +98,11 @@ header {
   #nav_burger {
     display: flex;
   }
+}
+
+/* Espaço para não sobrepor o conteúdo */
+body {
+  padding-top: 15vh;
 }
 
 /* ................HERO IMAGE */
