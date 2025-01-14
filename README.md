@@ -43,22 +43,24 @@ They are redirected to the payment form, where they simply fill in and submit th
 
 ## 📂 Project Structure
 
+```plaintext
 Flora_Website/
-├── index.html           # Main HTML file (Landing Page)
-├── styles/              # Folder for CSS files
-│   └── style.css        # Main stylesheet
-├── scripts/             # Folder for JavaScript (if any)
-├── pages/               # Folder for additional pages
-│   └── under-construction.html  # Placeholder page
-├── assets/              # Folder for images and other resources
-└── README.md            # Project documentation (this file)
-
+├── index.html                       # Main HTML file (Landing Page)
+├── styles/                          # Folder for CSS files
+│   └── style.css                    # Main stylesheet
+├── scripts/                         # Folder for JavaScript (if any)
+├── pages/                           # Folder for additional pages
+│   └── under-construction.html      # Placeholder page
+├── assets/                          # Folder for images and other resources
+└── README.md                        # Project documentation (this file)
+```
 ---
 
 ## 🎯 Purpose
 
 This project was developed as part of the Web Programming course at CESAE in 2024. 
-The goal was to practice designing and implementing an e-commerce website with a focus on usability and clean code.
+It was my first-ever project, designed and implemented within just one week. 
+The goal was to practice creating an e-commerce website with a focus on usability and clean code.
 
 ---
 
@@ -67,14 +69,5 @@ The goal was to practice designing and implementing an e-commerce website with a
 Sofia Santos
 
 GitHub: https://github.com/shia-santos
-LinkedIn: Your LinkedIn Profile (Add your LinkedIn link here)
-
----
-
-#### ✒️ Contexto e Autoria
-
-Projecto elaborado por Sofia Santos no âmbito da disciplina de Programação WEB na CESAE, 2024
-
-- HTML, CSS e Bootstrap
-– tempo: 2 semanas
+LinkedIn: www.linkedin.com/in/shiasantos
 
